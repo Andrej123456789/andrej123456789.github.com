@@ -1,0 +1,120 @@
+:root {
+  align-items: center;
+  font-family: "Droid Sans Mono";
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  background-color: #232323;
+  color: white;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Thanks to ChatGPT for this part */
+#naslov {
+  /* Specifies that the element should be positioned absolutely within its parent element */
+  position: absolute;
+  /* Centers the element vertically */
+  top: 50%;
+  /* Centers the element horizontally */
+  left: 50%;
+  /* Offsets the element by half its width and height to account for the absolute positioning */
+  transform: translate(-50%, -50%);
+  color: bisque;
+  line-height: 1.5;
+}
+
+a {
+  color: cadetblue;
+}
+
+#dno {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5;
+}
+
+#mini_space {
+  width: 25px;
+}
+
+#space {
+  height: 1000px;
+}
+
+#square {
+  width: 475px;
+  height: 375px;
+  border-radius: 7.5px;
+  background-color: #3d3838;
+  text-align: center;
+}
+
+#about_me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5;
+}
+
+#about_me_naslov {
+  color: lightcoral;
+}
+
+#projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5;
+}
+
+#projects_naslov {
+  color: rgb(128, 175, 57);
+}
+
+#langs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5;
+}
+
+#langs_naslov {
+  color: rgb(103, 180, 155);
+}
+
+#social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5;
+}
+
+#social_naslov {
+  color: brown;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+}
+
+button {
+  font-family: Tahoma, sans-serif;
+  border: 0;
+  color: var(--button-fg);
+  background-color: var(--button-bg);
+}/*# sourceMappingURL=style.css.map */
