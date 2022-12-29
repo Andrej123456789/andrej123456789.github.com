@@ -39,7 +39,7 @@
 }
 
 a {
-    color: cadetblue;
+    color: whitesmoke
 }
 
 #dno {
@@ -50,12 +50,20 @@ a {
     width: 25px;
 }
 
+#small_space {
+    height: 250px;
+}
+
 #space {
+    height: 500px;
+}
+
+#large_space {
     height: 1000px;
 }
 
 #square {
-    width: 475px;
+    width: 525px;
     height: 375px;
     border-radius: 7.5px;
     background-color: #3d3838;
@@ -76,6 +84,10 @@ a {
 
 #projects_naslov {
     color: rgb(128, 175, 57)
+}
+
+#projects_mini_naslov {
+    color: rgb(84, 175, 96)
 }
 
 #langs {
