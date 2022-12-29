@@ -1,103 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Droid Sans Mono"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        />
+        <link rel="stylesheet" href="scss/style.css" />
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+        <script defer src="main.js"></script>
+        <title>Andrej's website</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://fonts.googleapis.com/css?family=Droid Sans Mono' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="stylesheet" href="scss/style.css" />
-    <script defer src="main.js"></script>
-    <title>Andrej's website</title>
-</head>
-
-<body>
-    <div class="hidden" id="naslov">
-        <h1>Andrej's personal website</h1>
-    </div>
-
-    <div id="large_space">
-
-    </div>
-
-    <div class="hidden" id="about_me">
-        <div id="square">
-            <h1 id="about_me_naslov">Something about me</h1>
-            <p>Hello there! I am just average person born in Croatia who is interested in programming, specifically in
-                operating system and desktop apps development.</p>
+    <body>
+        <div class="hidden" id="naslov">
+            <h1>Andrej's personal website</h1>
         </div>
-    </div>
 
-    <div id="space">
+        <div id="large_space"> </div>
 
-    </div>
+        <div class="hidden" id="about_me">
+            <div id="square">
+                <h1 id="about_me_naslov">Something about me</h1>
+                <p
+                    >Hello there! I am just average person born in Croatia who
+                    is interested in programming, specifically in operating
+                    system and desktop apps development.</p
+                >
+            </div>
+        </div>
 
-    <div class="hidden" id="projects">
-        <div id="square">
-            <h1 id="projects_naslov">My good, solid projects</h1>
-            <div style="width:100%">
-                <div class="hidden" style="float:left;width:50%">
-                    <h3 id="projects_mini_naslov">Own, personal projects</h3>
-                    <li><a href="https://github.com/Andrej123456789/3x">3x</a></li>
-                    <li><a href="https://github.com/Andrej123456789/uno">uno</a></li>
-                    <li><a href="https://github.com/Andrej123456789/GVPaint">GVPaint</a></li>
-                    <li><a href="https://github.com/Andrej123456789/taurifetch">taurifetch</a></li>
-                    <li><a href="https://github.com/Andrej123456789/blagajna_gui">Blagajna GUI</a></li>
-                </div>
-                <div class="hidden" style="float:left;width:50%">
-                    <h3 id="projects_mini_naslov">ringwormGO projects</h3>
-                    <li><a href="https://github.com/ringwormGO-organization/ringOS">ringOS (archived)</a></li>
-                    <li><a href="https://github.com/ringwormGO-organization/Termi">Termi</a></li>
+        <div id="space"> </div>
+
+        <div class="hidden" id="projects">
+            <div id="square">
+                <h1 id="projects_naslov">My good, solid projects</h1>
+                <div style="width: 100%">
+                    <div class="hidden" style="float: left; width: 50%">
+                        <h3 id="projects_mini_naslov"
+                            >Own, personal projects</h3
+                        >
+                        <li
+                            ><a href="https://github.com/Andrej123456789/3x"
+                                >3x</a
+                            ></li
+                        >
+                        <li
+                            ><a href="https://github.com/Andrej123456789/uno"
+                                >uno</a
+                            ></li
+                        >
+                        <li
+                            ><a
+                                href="https://github.com/Andrej123456789/GVPaint"
+                                >GVPaint</a
+                            ></li
+                        >
+                        <li
+                            ><a
+                                href="https://github.com/Andrej123456789/taurifetch"
+                                >taurifetch</a
+                            ></li
+                        >
+                        <li
+                            ><a
+                                href="https://github.com/Andrej123456789/blagajna_gui"
+                                >Blagajna GUI</a
+                            ></li
+                        >
+                    </div>
+                    <div class="hidden" style="float: left; width: 50%">
+                        <h3 id="projects_mini_naslov">ringwormGO projects</h3>
+                        <li
+                            ><a
+                                href="https://github.com/ringwormGO-organization/ringOS"
+                                >ringOS (archived)</a
+                            ></li
+                        >
+                        <li
+                            ><a
+                                href="https://github.com/ringwormGO-organization/Termi"
+                                >Termi</a
+                            ></li
+                        >
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div id="space">
+        <div id="space"> </div>
 
-    </div>
-
-    <div class="hidden" id="langs">
-        <div id="square">
-            <h1 id="langs_naslov">Programming languages subjective tier list</h1>
-            <li>C++</li>
-            <li>C</li>
-            <li>Rust</li>
-            <li>Lua</li>
-            <li>Python</li>
-            <li>Dart</li>
-            <p>First one - most favourite, last one - least favourite</p>
+        <div class="hidden" id="langs">
+            <div id="square">
+                <h1 id="langs_naslov"
+                    >Programming languages subjective tier list</h1
+                >
+                <ol>
+                    <li>C++</li>
+                    <li>C</li>
+                    <li>Rust</li>
+                    <li>Lua</li>
+                    <li>Python</li>
+                    <li>Dart</li>
+                </ol>
+            </div>
         </div>
-    </div>
 
-    <div id="space">
+        <div id="space"> </div>
 
-    </div>
-
-    <div class="hidden" id="social">
-        <div id="square">
-            <h1 id="social_naslov">Social stuff: </h1>
-            <a href="https://github.com/Andrej123456789"><i class="fab fa-github" style="font-size:36px"></i></a>
-            <br />
-            <br />
-            <a href="https://gitlab.com/Andrej123456789"><i class="fab fa-gitlab" style="font-size:36px"></i></a>
-            <br />
-            <br />
-            <a href="andrej.bartulinvr@gmail.com"><i class="fas fa-envelope" style="font-size:36px"></i></a>
-            <br />
-            <br />
+        <div class="hidden" id="social">
+            <div id="square">
+                <h1 id="social_naslov">Social stuff: </h1>
+                <a href="https://github.com/Andrej123456789"
+                    ><i class="fab fa-github" style="font-size: 36px"></i
+                ></a>
+                <br />
+                <br />
+                <a href="https://gitlab.com/Andrej123456789"
+                    ><i class="fab fa-gitlab" style="font-size: 36px"></i
+                ></a>
+                <br />
+                <br />
+                <a href="andrej.bartulinvr@gmail.com"
+                    ><i class="fas fa-envelope" style="font-size: 36px"></i
+                ></a>
+                <br />
+                <br />
+            </div>
         </div>
-    </div>
 
-    <div id="space">
+        <div id="space"> </div>
 
-    </div>
+        <div class="hidden" id="langauges_chart">
+            <div id="big_square">
+                <h1 id="langauges_chart_naslov">Languages chart</h1>
+                <canvas id="chart"></canvas>
+                <h4
+                    >Percentage of main languages, languages which take over a
+                    repo</h4
+                >
+            </div>
+        </div>
 
-    <div id="dno" class="hidden">
-        <p>Andrej Bartulin, Public Domain, 2022</p>
-    </div>
+        <div id="space"></div>
 
-</body>
+        <div class="hidden" id="setup">
+            <div id="square">
+                <h1 id="setup_naslov">My setup</h1>
+                <div class="hidden" style="float: left; width: 50%">
+                    <h3 id="setup_mini_naslov">Hardware</h3>
+                    <li><i class="fas fa-laptop"></i> Acer Nitro 5</li>
+                    <li><i class="fas fa-microchip"></i> AMD Ryzen 7 4800H</li>
+                    <li><i class="fas fa-memory"></i> 16GB RAM</li>
+                    <li><i class="fas fa-hdd"></i> 512GB NVME SSD</li>
+                    <li><i class="fas fa-video"></i> GTX 1650 Ti</li>
+                </div>
+                <div class="hidden" style="float: left; width: 50%">
+                    <h3 id="setup_mini_naslov">Software</h3>
+                    <li><i class="fab fa-linux"></i> Artix Linux (dinit)</li>
+                    <li><i class="fas fa-code"></i> VS Code, Neovim</li>
+                    <li><i class="fab fa-firefox"></i> Firefox</li>
+                    <li><i class="fas fa-desktop"></i> KDE Plasma</li>
+                    <li><i class="fas fa-terminal"></i> Konsole</li>
+                </div>
+            </div>
+        </div>
 
+        <div id="space"></div>
+
+        <div id="dno" class="hidden">
+            <p>Andrej Bartulin, Public Domain, 2022</p>
+        </div>
+    </body>
 </html>

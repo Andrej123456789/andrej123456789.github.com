@@ -1,7 +1,7 @@
 :root {
     align-items: center;
 
-    font-family: 'Droid Sans Mono';
+    font-family: "Droid Sans Mono";
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
@@ -17,14 +17,25 @@
 }
 
 body {
-    background-image: linear-gradient(to right,
-            black 1px,
-            transparent 1px),
-        linear-gradient(to bottom,
-            black 1px,
-            transparent 1px);
+    background-image: linear-gradient(to right, black 1px, transparent 1px),
+        linear-gradient(to bottom, black 1px, transparent 1px);
     /* Set the size of the grid to 10 by 10 squares */
     background-size: 20px 20px;
+}
+
+@mixin center_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+}
+
+a {
+    color: whitesmoke;
+}
+
+li {
+    padding: 5px;
 }
 
 /* Thanks to ChatGPT for this part */
@@ -40,17 +51,6 @@ body {
 
     color: bisque;
     line-height: 1.5;
-}
-
-@mixin center_div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 1.5;
-}
-
-a {
-    color: whitesmoke
 }
 
 #dno {
@@ -81,6 +81,14 @@ a {
     text-align: center;
 }
 
+#big_square {
+    width: 525px;
+    height: 450px;
+    border-radius: 7.5px;
+    background-color: #3d3838;
+    text-align: center;
+}
+
 #about_me {
     @include center_div();
 }
@@ -93,12 +101,12 @@ a {
     @include center_div();
 }
 
-#projects_naslov {
-    color: rgb(128, 175, 57)
+#projects_mini_naslov {
+    color: rgb(84, 175, 96);
 }
 
-#projects_mini_naslov {
-    color: rgb(84, 175, 96)
+#projects_naslov {
+    color: rgb(128, 175, 57);
 }
 
 #langs {
@@ -115,6 +123,31 @@ a {
 
 #social_naslov {
     color: brown;
+}
+
+#langauges_chart {
+    @include center_div();
+}
+
+#langauges_chart_naslov {
+    color: darkkhaki;
+}
+
+#chart {
+    width: 250px;
+    height: 250px;
+}
+
+#setup {
+    @include center_div();
+}
+
+#setup_mini_naslov {
+    color: rgb(80, 89, 139);
+}
+
+#setup_naslov {
+    color: rgb(44, 90, 90);
 }
 
 .row {
