@@ -16,6 +16,17 @@
     -webkit-text-size-adjust: 100%;
 }
 
+body {
+    background-image: linear-gradient(to right,
+            black 1px,
+            transparent 1px),
+        linear-gradient(to bottom,
+            black 1px,
+            transparent 1px);
+    /* Set the size of the grid to 10 by 10 squares */
+    background-size: 20px 20px;
+}
+
 /* Thanks to ChatGPT for this part */
 #naslov {
     /* Specifies that the element should be positioned absolutely within its parent element */
