@@ -34,7 +34,7 @@ li {
   /* Centers the element vertically */
   top: 50%;
   /* Centers the element horizontally */
-  left: 50%;
+  left: 55%;
   /* Offsets the element by half its width and height to account for the absolute positioning */
   transform: translate(-50%, -50%);
   color: bisque;
@@ -67,14 +67,6 @@ li {
 #square {
   width: 525px;
   height: 500px;
-  border-radius: 7.5px;
-  background-color: #3d3838;
-  text-align: center;
-}
-
-#big_square {
-  width: 525px;
-  height: 450px;
   border-radius: 7.5px;
   background-color: #3d3838;
   text-align: center;
