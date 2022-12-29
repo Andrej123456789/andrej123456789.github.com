@@ -33,8 +33,6 @@ const mapArray = Array.from(languages);
 mapArray.sort((a, b) => b[1][0] - a[1][0]);
 const sortedMap = new Map(mapArray);
 
-console.log(sortedMap);
-
 const firstStrings = Array.from(sortedMap.entries()).map(([key, value]) => key);
 const numbers = Array.from(sortedMap.entries()).map(([key, value]) => value[0]);
 const secondStrings = Array.from(sortedMap.entries()).map(([key, value]) => value[1]);
