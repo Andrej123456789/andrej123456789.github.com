@@ -3,7 +3,7 @@ My perosnal website
 
 Code is public domain
 
-[Repl version](https://website.andrejbartulin.repl.co/) in case GitHub hosting is down or I broke GitHub actions (syncing may be late; repl uses vite and ts)
+[Vite version](https://github.com/Andrej123456789/andrej123456789.github.com/tree/main/junk) in case you want it; version 16th commit
 
 ## How to run locally
 1. Install VS Code `Live Server` extension
