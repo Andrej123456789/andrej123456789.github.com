@@ -17,7 +17,7 @@ hiddenElements.forEach((el) => observer.observe(el));
 
 /* ----------------------------------- */
 
-var languages = new Map<string, [number, string]>();
+var languages = new Map();
 
 languages.set("VB.NET", [6.66, "#945db7"]);
 languages.set("Python", [6.66, "#3572a5"]);
@@ -33,22 +33,22 @@ const mapArray = Array.from(languages);
 mapArray.sort((a, b) => b[1][0] - a[1][0]);
 const sortedMap = new Map(mapArray);
 
-const firstStrings = Array.from(sortedMap.entries()).map(([key, value]) => key);
-const numbers = Array.from(sortedMap.entries()).map(([key, value]) => value[0]);
-const secondStrings = Array.from(sortedMap.entries()).map(([key, value]) => value[1]);
-
+const firstStrings = Array.from(sortedMap.entries()).map(([key, _value]) => key);
+const numbers = Array.from(sortedMap.entries()).map(([_key, value]) => value[0]);
+const secondStrings = Array.from(sortedMap.entries()).map(([_key, value]) => value[1]);
 
 /*
  * Thanks for ChatGPT for this part
  * Get a reference to the canvas element
 */
-const canvas = document.getElementById("chart");
+const canvas = document.getElementById('chart');
+const ctx = canvas.getContext('2d');
 
 /*
  * Thanks for ChatGPT for this part
  * Create a new pie chart using Chart.js
 */
-const chart = new Chart(canvas, {
+const chart = new Chart(ctx, {
   type: "pie",
   data: {
     labels: firstStrings,
