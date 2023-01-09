@@ -19,15 +19,16 @@ hiddenElements.forEach((el) => observer.observe(el));
 
 var languages = new Map();
 
-languages.set("VB.NET", [6.66, "#945db7"]);
-languages.set("Python", [6.66, "#3572a5"]);
-languages.set("HTML", [13.33, "#e34c26"]);
-languages.set("Java", [6.66, "#b07219"]);
-languages.set("Rust", [26.66, "#dea584"]);
-languages.set("Assembly", [6.66, "#6e4c13"]);
-languages.set("C++", [6.66, "#f34b7d"]);
-languages.set("C", [13.33, "#555555"]);
-languages.set("Dart", [13.33, "#00b4ab"]);
+languages.set("VB.NET", [5.88, "#945db7"]);
+languages.set("Python", [5.88, "#3572a5"]);
+languages.set("HTML", [11.76, "#e34c26"]);
+languages.set("Java", [5.88, "#b07219"]);
+languages.set("Rust", [17.65, "#dea584"]);
+languages.set("Assembly", [5.88, "#6e4c13"]);
+languages.set("C++", [5.88, "#f34b7d"]);
+languages.set("C", [11.76, "#555555"]);
+languages.set("Dart", [11.76, "#00b4ab"]);
+languages.set("Vue", [5.88, "#41b883"])
 
 const mapArray = Array.from(languages);
 mapArray.sort((a, b) => b[1][0] - a[1][0]);
