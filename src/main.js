@@ -1,4 +1,4 @@
-/* Thanks to Fireship for code */
+/* Thanks to Fireship for the code */
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -27,7 +27,7 @@ languages.set("Rust", [26.66, "#dea584"]);
 languages.set("Assembly", [6.66, "#6e4c13"]);
 languages.set("C++", [6.66, "#f34b7d"]);
 languages.set("C", [13.33, "#555555"]);
-languages.set("Dart", [6.66, "#00b4ab"]);
+languages.set("Dart", [13.33, "#00b4ab"]);
 
 const mapArray = Array.from(languages);
 mapArray.sort((a, b) => b[1][0] - a[1][0]);
