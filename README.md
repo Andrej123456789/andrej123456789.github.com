@@ -8,3 +8,5 @@ Code is public domain
 ## How to run locally (my example)
 1. Install VS Code `Live Server` extension
 2. Click button `Go Live` on `Status Bar`
+
+*Data is sorted by greatness of numbers and also when repo is created (31st December, 2022)*
