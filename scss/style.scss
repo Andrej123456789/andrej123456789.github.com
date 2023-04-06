@@ -82,6 +82,15 @@ li {
     list-style-position: inside;
 }
 
+#lang_square {
+    width: 610px;
+    height: 610px;
+    border-radius: 7.5px;
+    background-color: #3d3838;
+    text-align: center;
+    list-style-position: inside;
+}
+
 #about_me {
     @include center_div();
 }

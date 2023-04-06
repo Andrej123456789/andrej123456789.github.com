@@ -25,15 +25,16 @@ function CalculatePercentage(number) {
 
 var languages = new Map();
 
-languages.set("VB.NET", [CalculatePercentage(1), "#945db7"]);
-languages.set("Python", [CalculatePercentage(1), "#3572a5"]);
+languages.set("Assembly", [CalculatePercentage(1), "#6e4c13"]);
+languages.set("C", [CalculatePercentage(2), "#555555"]);
+languages.set("C++", [CalculatePercentage(2), "#f34b7d"]);
+languages.set("Cuda", [CalculatePercentage(1), "#3a4e3a"])
+languages.set("Dart", [CalculatePercentage(2), "#00b4ab"]);
 languages.set("HTML", [CalculatePercentage(2), "#e34c26"]);
 languages.set("Java", [CalculatePercentage(1), "#b07219"]);
-languages.set("Rust", [CalculatePercentage(4), "#dea584"]);
-languages.set("Assembly", [CalculatePercentage(1), "#6e4c13"]);
-languages.set("C++", [CalculatePercentage(2), "#f34b7d"]);
-languages.set("C", [CalculatePercentage(3), "#555555"]);
-languages.set("Dart", [CalculatePercentage(2), "#00b4ab"]);
+languages.set("Python", [CalculatePercentage(1), "#3572a5"]);
+languages.set("Rust", [CalculatePercentage(5), "#dea584"]);
+languages.set("VB.NET", [CalculatePercentage(1), "#945db7"]);
 languages.set("Vue", [CalculatePercentage(1), "#41b883"]);
 languages.set("Without language", [CalculatePercentage(1), "gray"])
 
