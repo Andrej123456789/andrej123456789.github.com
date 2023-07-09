@@ -1,5 +1,51 @@
-/* Thanks to Fireship for the code */
+const accordionHistory = []
+const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
 
+accordionItemHeaders.forEach(accordionItemHeader => {
+    accordionItemHeader.addEventListener("click", event => {
+        accordionItemHeader.classList.toggle("active");
+        
+        const accordionItemBody = accordionItemHeader.nextElementSibling;
+        const headerContent = accordionItemHeader.textContent;
+
+        let newHeaderContent = headerContent.replace(/\s+/g, '');
+        newHeaderContent = newHeaderContent.replace(/\n/g, '');
+
+        if (accordionItemHeader.classList.contains("active")) {
+            accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+            accordionHistory.push(newHeaderContent);
+
+            if (newHeaderContent == "Own, personal projects".replace(/\s+/g, '') && accordionHistory.includes("ringwormGO projects".replace(/\s+/g, ''))) {
+                document.documentElement.style.setProperty("--square-height", "625px");
+            }
+
+            if (newHeaderContent == "ringwormGO projects".replace(/\s+/g, '') && accordionHistory.includes("Own, personal projects".replace(/\s+/g, ''))) {
+                document.documentElement.style.setProperty("--square-height", "625px");
+            }
+        }
+
+        else {
+            accordionItemBody.style.maxHeight = 0;
+
+            if (newHeaderContent == "Own, personal projects".replace(/\s+/g, '') && accordionHistory.includes("ringwormGO projects".replace(/\s+/g, ''))) {
+                document.documentElement.style.setProperty("--square-height", "525px");
+            }
+
+            if (newHeaderContent == "ringwormGO projects".replace(/\s+/g, '') && accordionHistory.includes("Own, personal projects".replace(/\s+/g, ''))) {
+                document.documentElement.style.setProperty("--square-height", "525px");
+            }
+
+            const index = accordionHistory.indexOf(newHeaderContent);
+            if (index > -1) {
+                accordionHistory.splice(index, 1);
+            }
+        }
+    })
+});
+
+/* ---------------------------------------------------------------------------- */
+
+/* Thanks to Fireship for the code */
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         console.log(entry);
@@ -15,7 +61,7 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el));
 
-/* ----------------------------------- */
+/* ---------------------------------------------------------------------------- */
 
 function CalculatePercentage(number) {
     const number_of_repos = 21;
@@ -28,7 +74,7 @@ var languages = new Map();
 languages.set("Assembly", [CalculatePercentage(1), "#6e4c13"]);
 languages.set("C", [CalculatePercentage(3), "#555555"]);
 languages.set("C++", [CalculatePercentage(2), "#f34b7d"]);
-languages.set("Cuda", [CalculatePercentage(1), "#3a4e3a"])
+languages.set("Cuda", [CalculatePercentage(1), "#3a4e3a"]);
 languages.set("Dart", [CalculatePercentage(2), "#00b4ab"]);
 languages.set("HTML", [CalculatePercentage(2), "#e34c26"]);
 languages.set("Java", [CalculatePercentage(1), "#b07219"]);
@@ -36,7 +82,7 @@ languages.set("Python", [CalculatePercentage(1), "#3572a5"]);
 languages.set("Rust", [CalculatePercentage(5), "#dea584"]);
 languages.set("VB.NET", [CalculatePercentage(1), "#945db7"]);
 languages.set("Vue", [CalculatePercentage(1), "#41b883"]);
-languages.set("Without language", [CalculatePercentage(1), "gray"])
+languages.set("Without language", [CalculatePercentage(1), "gray"]);
 
 const mapArray = Array.from(languages);
 mapArray.sort((a, b) => b[1][0] - a[1][0]);
@@ -97,9 +143,7 @@ const chart = new Chart(ctx, {
                         " : " +
                         (
                             Math.round(
-                                data.datasets[tooltipItems.datasetIndex].data[
-                                    tooltipItems.index
-                                ] * 100
+                                data.datasets[tooltipItems.datasetIndex].data[tooltipItems.index] * 100
                             ) / 100
                         ).toString() +
                         " %"
