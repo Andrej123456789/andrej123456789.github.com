@@ -16,11 +16,11 @@ accordionItemHeaders.forEach(accordionItemHeader => {
             accordionHistory.push(newHeaderContent);
 
             if (newHeaderContent == "Own, personal projects".replace(/\s+/g, '') && accordionHistory.includes("ringwormGO projects".replace(/\s+/g, ''))) {
-                document.documentElement.style.setProperty("--square-height", "625px");
+                document.documentElement.style.setProperty("--square-height", "650px");
             }
 
             if (newHeaderContent == "ringwormGO projects".replace(/\s+/g, '') && accordionHistory.includes("Own, personal projects".replace(/\s+/g, ''))) {
-                document.documentElement.style.setProperty("--square-height", "625px");
+                document.documentElement.style.setProperty("--square-height", "650px");
             }
         }
 
