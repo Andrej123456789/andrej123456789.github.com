@@ -29,6 +29,10 @@ li {
   padding: 5px;
 }
 
+.organizations {
+  line-height: 2.6em;
+}
+
 .fa-github:hover {
   color: black;
 }
