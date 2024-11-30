@@ -190,6 +190,28 @@ li {
 }
 
 /* -------------------------------------------------------- */
+/* Style for scroll animations
+/* -------------------------------------------------------- */
+
+.organizations {
+    line-height: 2.6em;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.hidden {
+    opacity: 0;
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+}
+
+/* -------------------------------------------------------- */
 /* Style for drop down menu */
 /* -------------------------------------------------------- */
 
