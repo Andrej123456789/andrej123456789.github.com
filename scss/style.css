@@ -1,18 +1,29 @@
 @charset "UTF-8";
+/* -------------------------------------------------------- */
+/* Global variables and global mixins */
+/* -------------------------------------------------------- */
 :root {
   align-items: center;
   font-family: "Droid Sans Mono";
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-  --square-height: 525px;
+  --square-width: 600px;
+  --square-height: 550px;
   background-color: #232323;
-  color: white;
+  color: whitesmoke;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+/* -------------------------------------------------------- */
+/* Style for global HTML elements */
+/* -------------------------------------------------------- */
+a {
+  color: whitesmoke;
 }
 
 body {
@@ -21,26 +32,20 @@ body {
   background-size: 20px 20px;
 }
 
-a {
-  color: whitesmoke;
+button {
+  font-family: Tahoma, sans-serif;
+  border: 0;
+  color: var(--button-fg);
+  background-color: var(--button-bg);
 }
 
 li {
   padding: 5px;
 }
 
-.organizations {
-  line-height: 2.6em;
-}
-
-.fa-github:hover {
-  color: black;
-}
-
-.fa-envelope:hover {
-  color: wheat;
-}
-
+/* -------------------------------------------------------- */
+/* Style for "global elements", header, footer, spaces and squares */
+/* -------------------------------------------------------- */
 /* Thanks to ChatGPT for this part */
 #naslov {
   /* Specifies that the element should be positioned absolutely within its parent element */
@@ -70,8 +75,8 @@ li {
   height: 1000px;
 }
 
-#square {
-  width: 525px;
+#square, #lang_square {
+  width: var(--square-width);
   height: var(--square-height);
   border-radius: 7.5px;
   background-color: #3d3838;
@@ -82,12 +87,22 @@ li {
 #lang_square {
   width: 610px;
   height: 610px;
-  border-radius: 7.5px;
-  background-color: #3d3838;
-  text-align: center;
-  list-style-position: inside;
 }
 
+/* -------------------------------------------------------- */
+/* Style for IDs and classes */
+/* -------------------------------------------------------- */
+.fa-github:hover {
+  color: black;
+}
+
+.fa-envelope:hover {
+  color: wheat;
+}
+
+/* -------------------------------------------------------- */
+/* Styles for each square and square's title */
+/* -------------------------------------------------------- */
 #about_me {
   display: flex;
   justify-content: center;
@@ -99,6 +114,14 @@ li {
   color: lightcoral;
 }
 
+#about_me_naslov_dva {
+  color: rgb(236, 162, 162);
+}
+
+#about_me_lista {
+  text-indent: -50px;
+}
+
 #projects {
   display: flex;
   justify-content: center;
@@ -106,12 +129,12 @@ li {
   line-height: 1.5;
 }
 
-#projects_mini_naslov {
-  color: rgb(84, 175, 96);
-}
-
 #projects_naslov {
   color: rgb(128, 175, 57);
+}
+
+#projects_mini_naslov {
+  color: rgb(84, 175, 96);
 }
 
 #langs {
@@ -167,27 +190,9 @@ li {
   color: rgb(107, 180, 180);
 }
 
-.row {
-  display: flex;
-  justify-content: center;
-}
-
-.hidden {
-  opacity: 0;
-  transition: all 1s;
-}
-
-.show {
-  opacity: 1;
-}
-
-button {
-  font-family: Tahoma, sans-serif;
-  border: 0;
-  color: var(--button-fg);
-  background-color: var(--button-bg);
-}
-
+/* -------------------------------------------------------- */
+/* Style for drop down menu */
+/* -------------------------------------------------------- */
 .accordion-item-header {
   padding: 0.5rem 3rem 0.5rem 1rem;
   min-height: 3.5rem;

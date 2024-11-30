@@ -16,11 +16,11 @@ accordionItemHeaders.forEach(accordionItemHeader => {
             accordionHistory.push(newHeaderContent);
 
             if (newHeaderContent == "Own, personal projects".replace(/\s+/g, '') && accordionHistory.includes("ringwormGO projects".replace(/\s+/g, ''))) {
-                document.documentElement.style.setProperty("--square-height", "650px");
+                document.documentElement.style.setProperty("--square-height", "725px");
             }
 
             if (newHeaderContent == "ringwormGO projects".replace(/\s+/g, '') && accordionHistory.includes("Own, personal projects".replace(/\s+/g, ''))) {
-                document.documentElement.style.setProperty("--square-height", "650px");
+                document.documentElement.style.setProperty("--square-height", "725px");
             }
         }
 
@@ -28,11 +28,11 @@ accordionItemHeaders.forEach(accordionItemHeader => {
             accordionItemBody.style.maxHeight = 0;
 
             if (newHeaderContent == "Own, personal projects".replace(/\s+/g, '') && accordionHistory.includes("ringwormGO projects".replace(/\s+/g, ''))) {
-                document.documentElement.style.setProperty("--square-height", "525px");
+                document.documentElement.style.setProperty("--square-height", "550px");
             }
 
             if (newHeaderContent == "ringwormGO projects".replace(/\s+/g, '') && accordionHistory.includes("Own, personal projects".replace(/\s+/g, ''))) {
-                document.documentElement.style.setProperty("--square-height", "525px");
+                document.documentElement.style.setProperty("--square-height", "550px");
             }
 
             const index = accordionHistory.indexOf(newHeaderContent);
