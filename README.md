@@ -1,5 +1,5 @@
 # andrej123456789.github.com
-My perosnal website
+My personal website
 
 Code is public domain
 
