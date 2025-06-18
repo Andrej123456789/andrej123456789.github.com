@@ -19,42 +19,35 @@
   -webkit-text-size-adjust: 100%;
 }
 
-/* -------------------------------------------------------- */
-/* Style for global HTML elements */
-/* -------------------------------------------------------- */
+/* ------------------------------------------------------------------------- */
+/*                      Style for global HTML elements                       */
+/* ------------------------------------------------------------------------- */
 a {
   color: whitesmoke;
 }
 
 body {
   background-image: linear-gradient(to right, black 1px, transparent 1px), linear-gradient(to bottom, black 1px, transparent 1px);
-  /* Set the size of the grid to 10 by 10 squares */
   background-size: 20px 20px;
 }
 
 button {
   font-family: Tahoma, sans-serif;
   border: 0;
-  color: var(--button-fg);
-  background-color: var(--button-bg);
 }
 
 li {
   padding: 5px;
 }
 
-/* -------------------------------------------------------- */
-/* Style for "global elements", header, footer, spaces and squares */
-/* -------------------------------------------------------- */
+/* ------------------------------------------------------------------------- */
+/*                       Style for global IDs and classes                    */
+/* ------------------------------------------------------------------------- */
 /* Thanks to ChatGPT for this part */
 #naslov {
-  /* Specifies that the element should be positioned absolutely within its parent element */
   position: absolute;
-  /* Centers the element vertically */
   top: 50%;
-  /* Centers the element horizontally */
   left: 50%;
-  /* Offsets the element by half its width and height to account for the absolute positioning */
   transform: translate(-50%, -50%);
   color: bisque;
   line-height: 1.5;
@@ -89,9 +82,9 @@ li {
   height: 610px;
 }
 
-/* -------------------------------------------------------- */
-/* Style for IDs and classes */
-/* -------------------------------------------------------- */
+/* ------------------------------------------------------------------------- */
+/*                              Style for icons                              */
+/* ------------------------------------------------------------------------- */
 .fa-github:hover {
   color: black;
 }
@@ -100,9 +93,9 @@ li {
   color: wheat;
 }
 
-/* -------------------------------------------------------- */
-/* Styles for each square and square's title */
-/* -------------------------------------------------------- */
+/* ------------------------------------------------------------------------- */
+/*                             Style for each square                         */
+/* ------------------------------------------------------------------------- */
 #about_me {
   display: flex;
   justify-content: center;
@@ -110,15 +103,15 @@ li {
   line-height: 1.5;
 }
 
-#about_me_naslov {
+#about_me_title {
   color: lightcoral;
 }
 
-#about_me_naslov_dva {
+#about_me_subtitle {
   color: rgb(236, 162, 162);
 }
 
-#about_me_lista {
+#about_me_organization_list {
   text-indent: -50px;
 }
 
@@ -128,13 +121,12 @@ li {
   align-items: center;
   line-height: 1.5;
 }
-
-#projects_naslov {
-  color: rgb(128, 175, 57);
+#projects a {
+  color: lightblue;
 }
 
-#projects_mini_naslov {
-  color: rgb(84, 175, 96);
+#projects_title {
+  color: rgb(128, 175, 57);
 }
 
 #langs {
@@ -144,7 +136,7 @@ li {
   line-height: 1.5;
 }
 
-#langs_naslov {
+#langs_title {
   color: rgb(103, 180, 155);
 }
 
@@ -155,7 +147,7 @@ li {
   line-height: 1.5;
 }
 
-#social_naslov {
+#social_title {
   color: brown;
 }
 
@@ -166,8 +158,12 @@ li {
   line-height: 1.5;
 }
 
-#langauges_chart_naslov {
+#langauges_chart_title {
   color: darkkhaki;
+}
+
+#languages_chart_list {
+  text-indent: -50px;
 }
 
 #chart {
@@ -182,17 +178,17 @@ li {
   line-height: 1.5;
 }
 
-#setup_mini_naslov {
-  color: rgb(158, 164, 216);
-}
-
-#setup_naslov {
+#setup_title {
   color: rgb(107, 180, 180);
 }
 
-/* -------------------------------------------------------- */
-/* Style for scroll animations
-/* -------------------------------------------------------- */
+#setup_subtitle {
+  color: rgb(158, 164, 216);
+}
+
+/* ------------------------------------------------------------------------- */
+/*                      Style for scroll animations                          */
+/* ------------------------------------------------------------------------- */
 .organizations {
   line-height: 2.6em;
 }
@@ -211,9 +207,9 @@ li {
   opacity: 1;
 }
 
-/* -------------------------------------------------------- */
-/* Style for drop down menu */
-/* -------------------------------------------------------- */
+/* ------------------------------------------------------------------------- */
+/*                      Style for drop down menu                             */
+/* ------------------------------------------------------------------------- */
 .accordion-item-header {
   padding: 0.5rem 3rem 0.5rem 1rem;
   min-height: 3.5rem;

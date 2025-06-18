@@ -11,39 +11,40 @@ accordionItemHeaders.forEach(accordionItemHeader => {
         let newHeaderContent = headerContent.replace(/\s+/g, '');
         newHeaderContent = newHeaderContent.replace(/\n/g, '');
 
-        if (accordionItemHeader.classList.contains("active")) {
+        let active = accordionItemHeader.classList.contains("active");
+        if (active) {
             accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
             accordionHistory.push(newHeaderContent);
-
-            if (newHeaderContent == "Own, personal projects".replace(/\s+/g, '') && accordionHistory.includes("ringwormGO projects".replace(/\s+/g, ''))) {
-                document.documentElement.style.setProperty("--square-height", "725px");
-            }
-
-            if (newHeaderContent == "ringwormGO projects".replace(/\s+/g, '') && accordionHistory.includes("Own, personal projects".replace(/\s+/g, ''))) {
-                document.documentElement.style.setProperty("--square-height", "725px");
-            }
         }
 
         else {
             accordionItemBody.style.maxHeight = 0;
-
-            if (newHeaderContent == "Own, personal projects".replace(/\s+/g, '') && accordionHistory.includes("ringwormGO projects".replace(/\s+/g, ''))) {
-                document.documentElement.style.setProperty("--square-height", "550px");
-            }
-
-            if (newHeaderContent == "ringwormGO projects".replace(/\s+/g, '') && accordionHistory.includes("Own, personal projects".replace(/\s+/g, ''))) {
-                document.documentElement.style.setProperty("--square-height", "550px");
-            }
 
             const index = accordionHistory.indexOf(newHeaderContent);
             if (index > -1) {
                 accordionHistory.splice(index, 1);
             }
         }
+
+        if (newHeaderContent == "Own, personal projects".replace(/\s+/g, '') && accordionHistory.includes("ringwormGO projects".replace(/\s+/g, ''))) {
+            document.documentElement.style.setProperty("--square-height", (active) ? "775px" : "550px");
+        }
+
+        if (newHeaderContent == "Own, personal projects".replace(/\s+/g, '') && accordionHistory.includes("B.A.G.E.R. projects".replace(/\s+/g, ''))) {
+            document.documentElement.style.setProperty("--square-height", (active) ? "775px" : "550px");
+        }
+
+        if (newHeaderContent == "ringwormGO projects".replace(/\s+/g, '') && accordionHistory.includes("Own, personal projects".replace(/\s+/g, ''))) {
+            document.documentElement.style.setProperty("--square-height", (active) ? "775px" : "550px");
+        }
+
+        if (newHeaderContent == "B.A.G.E.R. projects".replace(/\s+/g, '') && accordionHistory.includes("Own, personal projects".replace(/\s+/g, ''))) {
+            document.documentElement.style.setProperty("--square-height", (active) ? "775px" : "550px");
+        }
     })
 });
 
-/* ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------- */
 
 /* Thanks to Fireship for the code */
 const observer = new IntersectionObserver((entries) => {
@@ -61,7 +62,7 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el));
 
-/* ---------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------- */
 
 function CalculatePercentage(number) {
     const number_of_repos = 38;
@@ -101,25 +102,15 @@ const secondStrings = Array.from(sortedMap.entries()).map(
     ([_key, value]) => value[1]
 );
 
-numbers_two = [];
-
-for (let index = 0; index < numbers.length; index++) {
-    const element = numbers[index];
-
-    numbers_two.push((Math.round(element * 100) / 100).toString() + "%");
-}
-
-console.log(numbers_two);
-
 /*
- * Thanks for ChatGPT for this part
+ * Thanks to ChatGPT for this part
  * Get a reference to the canvas element
  */
 const canvas = document.getElementById("chart");
 const ctx = canvas.getContext("2d");
 
 /*
- * Thanks for ChatGPT for this part
+ * Thanks to ChatGPT for this part
  * Create a new pie chart using Chart.js
  */
 const chart = new Chart(ctx, {

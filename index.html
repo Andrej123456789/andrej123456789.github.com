@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css?family=Droid Sans Mono" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css"
         integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous" />
     <link rel="stylesheet" href="scss/style.css" />
@@ -24,19 +24,19 @@
 
     <div class="hidden" id="about_me">
         <div id="square">
-            <h1 id="about_me_naslov">Something about me</h1>
+            <h1 id="about_me_title">Something about me</h1>
             <p>
-                Hello there! I come from Croatia and I
-                do programming. Specifically interested in low level things,
+                <i class="fa-solid fa-computer"></i> Hello there! I come from Croatia and I
+                do programming. Specifically interested in low level things
                 and desktop applications.
             </p>
 
             <p>
-                I also enjoy urbanism and science.
+                <i class="fa-solid fa-tree-city"></i> <i class="fa-solid fa-magnet"></i> I also enjoy urbanism and science.
             </p>
 
-            <h2 id="about_me_naslov_dva">Projects I am member of</h2>
-            <ul id="about_me_lista">
+            <h2 id="about_me_subtitle">Projects I am member of</h2>
+            <ul id="about_me_organization_list">
                 <li><a href="https://github.com/ringwormGO-organization">ringwormGO</a></li>
                 <li><a href="https://github.com/bager-project">B.A.G.E.R.</a></li>
                 <li><a href="https://github.com/Lithicsoft">Lithicsoft</a></li>
@@ -49,7 +49,7 @@
 
     <div class="hidden" id="projects">
         <div id="square">
-            <h1 id="projects_naslov">My good, solid projects</h1>
+            <h1 id="projects_title">My good, solid projects</h1>
 
             <div class="accordion">
                 <div class="accordion-item">
@@ -87,13 +87,26 @@
                     <div class="accordion-item-body">
                         <div class="accordion-item-body-content">
                             <li>
-                                <a href="https://github.com/ringwormGO-organization/ringOS">ringOS (archived)</a>
+                                <a href="https://github.com/ringwormGO-organization/ringOS">ringOS</a>
                             </li>
                             <li>
                                 <a href="https://github.com/ringwormGO-organization/Termi">Termi</a>
                             </li>
                             <li>
                                 <a href="https://github.com/ringwormGO-organization/Pelly">Pelly</a>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-item-header">
+                        <h3><strong>B.A.G.E.R. projects</strong></h3>
+                    </div>
+                    <div class="accordion-item-body">
+                        <div class="accordion-item-body-content">
+                            <li>
+                                <a href="https://github.com/bager-project">the whole thing :)</a>
                             </li>
                         </div>
                     </div>
@@ -106,7 +119,7 @@
 
     <div class="hidden" id="langs">
         <div id="square">
-            <h1 id="langs_naslov">
+            <h1 id="langs_title">
                 Programming languages subjective tier list
             </h1>
             <ol>
@@ -125,7 +138,7 @@
 
     <div class="hidden" id="social">
         <div id="square">
-            <h1 id="social_naslov">Social stuff:</h1>
+            <h1 id="social_title">Social stuff:</h1>
             <a href="https://github.com/Andrej123456789"><i class="fa fa-github fa-3x"></i></a>
             <br />
             <br />
@@ -143,18 +156,14 @@
 
     <div class="hidden" id="langauges_chart">
         <div id="lang_square">
-            <h1 id="langauges_chart_naslov">Languages chart</h1>
+            <h1 id="langauges_chart_title">Languages chart</h1>
             <canvas id="chart"></canvas>
-            <p>
-                Percentage of main languages, languages which take over a
-                repo
-            </p>
-            <p>Forks are not included</p>
-            <p>
-                Updates are not automatically updated and therefore expect
-                chart to be sometims out of sync
-            </p>
-            <p>Percentages are rounded on two decimal places</p>
+            <ol id="languages_chart_list">
+                <li>"Repo-count" statistics (main language of the repo).</li>
+                <li>Forks are excluded.</li>
+                <li>Chart is not automatically updated.</li>
+                <li>Percentages are rounded on two decimal places.</li>
+            </ol>
         </div>
     </div>
 
@@ -162,9 +171,9 @@
 
     <div class="hidden" id="setup">
         <div id="square">
-            <h1 id="setup_naslov">My setup</h1>
+            <h1 id="setup_title">My setup</h1>
             <div class="hidden" style="float: left; width: 50%">
-                <h3 id="setup_mini_naslov">Hardware</h3>
+                <h3 id="setup_subtitle">Hardware</h3>
                 <li><i class="fa fa-laptop"></i> Acer Nitro 5</li>
                 <li><i class="fa fa-microchip"></i> AMD Ryzen 7 4800H</li>
                 <li><i class="fas fa-memory"></i> 16GB RAM</li>
@@ -173,9 +182,9 @@
                 <li><i class="fa fa-video"></i> Nvidia GTX 1650 Ti</li>
             </div>
             <div class="hidden" style="float: left; width: 50%">
-                <h3 id="setup_mini_naslov">Software</h3>
+                <h3 id="setup_subtitle">Software</h3>
                 <li><i class="fa fa-archlinux"></i> Artix Linux (dinit)</li>
-                <li><i class="fa fa-code"></i> VS Code, Neovim</li>
+                <li><i class="fa fa-code"></i> VS Code</li>
                 <li><i class="fa fa-firefox"></i> Firefox</li>
                 <li><i class="fa fa-desktop"></i> KDE Plasma</li>
                 <li><i class="fa fa-terminal"></i> Konsole</li>
