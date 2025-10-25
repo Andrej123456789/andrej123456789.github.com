@@ -1,47 +1,38 @@
-const accordionHistory = []
-const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
+/* Thanks to ChatGPT for this part */
+document.addEventListener("DOMContentLoaded", () => {
+    // Only target the accordions inside #projects
+    const projectsSection = document.querySelector("#projects");
+    if (!projectsSection) return;
 
-accordionItemHeaders.forEach(accordionItemHeader => {
-    accordionItemHeader.addEventListener("click", event => {
-        accordionItemHeader.classList.toggle("active");
-        
-        const accordionItemBody = accordionItemHeader.nextElementSibling;
-        const headerContent = accordionItemHeader.textContent;
+    const accordionItemHeaders = projectsSection.querySelectorAll(".accordion-item-header");
+    const square = projectsSection.querySelector("#square");
 
-        let newHeaderContent = headerContent.replace(/\s+/g, '');
-        newHeaderContent = newHeaderContent.replace(/\n/g, '');
+    // Base and per-item expansion height
+    const baseHeight = 550;
+    const heightPerAccordion = 100;
 
-        let active = accordionItemHeader.classList.contains("active");
-        if (active) {
-            accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
-            accordionHistory.push(newHeaderContent);
-        }
+    accordionItemHeaders.forEach((header) => {
+        header.addEventListener("click", () => {
+            header.classList.toggle("active");
+            const body = header.nextElementSibling;
+            const isActive = header.classList.contains("active");
 
-        else {
-            accordionItemBody.style.maxHeight = 0;
-
-            const index = accordionHistory.indexOf(newHeaderContent);
-            if (index > -1) {
-                accordionHistory.splice(index, 1);
+            // Smooth accordion open/close
+            if (isActive) {
+                body.style.maxHeight = body.scrollHeight + "px";
+            } else {
+                body.style.maxHeight = 0;
             }
-        }
 
-        if (newHeaderContent == "Own, personal projects".replace(/\s+/g, '') && accordionHistory.includes("ringwormGO projects".replace(/\s+/g, ''))) {
-            document.documentElement.style.setProperty("--square-height", (active) ? "775px" : "550px");
-        }
+            // Count active accordions inside #projects only
+            const activeCount = projectsSection.querySelectorAll(".accordion-item-header.active").length;
 
-        if (newHeaderContent == "Own, personal projects".replace(/\s+/g, '') && accordionHistory.includes("B.A.G.E.R. projects".replace(/\s+/g, ''))) {
-            document.documentElement.style.setProperty("--square-height", (active) ? "775px" : "550px");
-        }
-
-        if (newHeaderContent == "ringwormGO projects".replace(/\s+/g, '') && accordionHistory.includes("Own, personal projects".replace(/\s+/g, ''))) {
-            document.documentElement.style.setProperty("--square-height", (active) ? "775px" : "550px");
-        }
-
-        if (newHeaderContent == "B.A.G.E.R. projects".replace(/\s+/g, '') && accordionHistory.includes("Own, personal projects".replace(/\s+/g, ''))) {
-            document.documentElement.style.setProperty("--square-height", (active) ? "775px" : "550px");
-        }
-    })
+            // Calculate and apply new height
+            const newHeight = baseHeight + activeCount * heightPerAccordion;
+            square.style.transition = "height 0.3s ease";
+            square.style.height = newHeight + "px";
+        });
+    });
 });
 
 /* ------------------------------------------------------------------------- */
