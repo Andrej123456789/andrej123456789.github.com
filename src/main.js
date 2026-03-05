@@ -56,7 +56,7 @@ hiddenElements.forEach((el) => observer.observe(el));
 /* ------------------------------------------------------------------------- */
 
 function CalculatePercentage(number) {
-    const number_of_repos = 39;
+    const number_of_repos = 40;
 
     return (number / number_of_repos) * 100;
 }
@@ -72,7 +72,7 @@ languages.set("Dart", [CalculatePercentage(2), "#00b4ab"]);
 languages.set("HTML", [CalculatePercentage(2), "#e34c26"]);
 languages.set("Java", [CalculatePercentage(6), "#b07219"]);
 languages.set("Makefile", [CalculatePercentage(1), "#427819"])
-languages.set("Python", [CalculatePercentage(2), "#3572a5"]);
+languages.set("Python", [CalculatePercentage(3), "#3572a5"]);
 languages.set("Rust", [CalculatePercentage(7), "#dea584"]);
 languages.set("Shell", [CalculatePercentage(1), "#89e051"])
 languages.set("VB.NET", [CalculatePercentage(1), "#945db7"]);
