@@ -85,6 +85,10 @@ li {
 /* ------------------------------------------------------------------------- */
 /*                              Style for icons                              */
 /* ------------------------------------------------------------------------- */
+.fa-youtube:hover {
+  color: red;
+}
+
 .fa-github:hover {
   color: black;
 }
@@ -112,7 +116,20 @@ li {
 }
 
 #about_me_list {
-  text-indent: -50px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+#about_me_list a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+#about_me_list img {
+  height: 36px;
+  display: block;
 }
 
 #projects {
@@ -129,26 +146,49 @@ li {
   color: rgb(128, 175, 57);
 }
 
+#contributions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5;
+}
+#contributions a {
+  color: lightblue;
+}
+#contributions li {
+  text-indent: -50px;
+}
+
+#contributions_title {
+  color: rgb(255, 192, 103);
+}
+
+#awards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5;
+}
+#awards li {
+  text-indent: -50px;
+}
+
+#awards_title {
+  color: rgb(254, 238, 140);
+}
+
 #langs {
   display: flex;
   justify-content: center;
   align-items: center;
   line-height: 1.5;
 }
+#langs li {
+  text-indent: -50px;
+}
 
 #langs_title {
   color: rgb(103, 180, 155);
-}
-
-#social {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  line-height: 1.5;
-}
-
-#social_title {
-  color: brown;
 }
 
 #langauges_chart {

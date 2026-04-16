@@ -6,10 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css?family=Droid Sans Mono" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css"
-        integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous" />
     <link rel="stylesheet" href="scss/style.css" />
+    <script src="https://kit.fontawesome.com/120c989675.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
     <script defer src="src/main.js"></script>
     <title>Andrej's website</title>
@@ -35,10 +33,21 @@
                 <i class="fa-solid fa-tree-city"></i> <i class="fa-solid fa-magnet"></i> I also enjoy urbanism and science.
             </p>
 
-            <h2 id="about_me_subtitle">Favorite physicist</h2>
-            <ul id="about_me_list">
-                <li><a href="https://en.wikipedia.org/wiki/Joseph-Louis_Lagrange">Joseph-Louis Lagrange</a></li>
-            </ul>
+            <h2 id="about_me_subtitle">Social links</h2>
+            <div id="about_me_list">
+                <a href="https://www.youtube.com/@andrejbartulin">
+                    <i class="fa-brands fa-youtube" style="font-size: 36px"></i>
+                </a>
+                <a href="https://github.com/Andrej123456789">
+                    <i class="fa-brands fa-github" style="font-size: 36px"></i>
+                </a>
+                <a href="https://codeberg.org/Andrej123456789">
+                    <img src="codeberg.svg" alt="Codeberg" />
+                </a>
+                <a href="mailto:andrej.bartulinvr@gmail.com">
+                    <i class="fa-solid fa-envelope" style="font-size: 36px"></i>
+                </a>
+            </div>
         </div>
     </div>
 
@@ -124,6 +133,32 @@
 
     <div id="space"></div>
 
+    <div class="hidden" id="contributions">
+        <div id="square">
+            <h1 id="contributions_title">Contributions</h1>
+            <ul>
+                <li>
+                    <a href="https://github.com/reactos/reactos">ReactOS</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="space"></div>
+
+        <div class="hidden" id="awards">
+        <div id="square">
+            <h1 id="awards_title">Awards</h1>
+            <ul>
+                <li>2023 - 3rd place country level, informatics</li>
+                <li>2024 - 3rd place country level, informatics</li>
+                <li>2026 - 2nd place state level, biology</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="space"></div>
+
     <div class="hidden" id="langs">
         <div id="square">
             <h1 id="langs_title">
@@ -135,24 +170,6 @@
                 <li>Python</li>
                 <li>Rust</li>
             </ol>
-        </div>
-    </div>
-
-    <div id="space"></div>
-
-    <div class="hidden" id="social">
-        <div id="square">
-            <h1 id="social_title">Social links</h1>
-            <a href="https://github.com/Andrej123456789"><i class="fa fa-github fa-3x"></i></a>
-            <br />
-            <br />
-            <a href="https://codeberg.org/Andrej123456789"><img src="codeberg.svg" /></a>
-            <br />
-            <br />
-            <a href="mailto:andrej.bartulinvr@gmail.com"><i class="fa fa-envelope fa-3x"
-                    style="font-size: 36px"></i></a>
-            <br />
-            <br />
         </div>
     </div>
 
@@ -178,20 +195,20 @@
             <h1 id="setup_title">My setup</h1>
             <div class="hidden" style="float: left; width: 50%">
                 <h3 id="setup_subtitle">Hardware</h3>
-                <li><i class="fa fa-laptop"></i> Acer Nitro 5</li>
-                <li><i class="fa fa-microchip"></i> AMD Ryzen 7 4800H</li>
-                <li><i class="fas fa-memory"></i> 16GB RAM</li>
-                <li><i class="fa fa-hdd-o"></i> 512GB NVME SSD</li>
-                <li><i class="fa fa-hdd-o"></i> 1TB NVME SSD</li>
+                <li><i class="fa-solid fa-laptop"></i> Acer Nitro 5</li>
+                <li><i class="fa-solid fa-microchip"></i> AMD Ryzen 7 4800H</li>
+                <li><i class="fa-solid fa-memory"></i> 16GB RAM</li>
+                <li><i class="fa-regular fa-hard-drive"></i> 512GB NVME SSD</li>
+                <li><i class="fa-regular fa-hard-drive"></i> 1TB NVME SSD</li>
                 <li><i class="fa fa-video"></i> Nvidia GTX 1650 Ti</li>
             </div>
             <div class="hidden" style="float: left; width: 50%">
                 <h3 id="setup_subtitle">Software</h3>
-                <li><i class="fa fa-archlinux"></i> Arch Linux</li>
-                <li><i class="fa fa-code"></i> VS Code</li>
-                <li><i class="fa fa-firefox"></i> Firefox</li>
-                <li><i class="fa fa-desktop"></i> KDE Plasma</li>
-                <li><i class="fa fa-terminal"></i> Konsole</li>
+                <li><i class="fa-brands fa-arch-linux"></i> Arch Linux</li>
+                <li><i class="fa-solid fa-code"></i> VS Code</li>
+                <li><i class="fa-brands fa-firefox"></i> Firefox</li>
+                <li><i class="fa-solid fa-desktop"></i> KDE Plasma</li>
+                <li><i class="fa-solid fa-terminal"></i> Konsole</li>
             </div>
         </div>
     </div>

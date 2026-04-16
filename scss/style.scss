@@ -102,6 +102,10 @@ li {
 /*                              Style for icons                              */
 /* ------------------------------------------------------------------------- */
 
+.fa-youtube:hover {
+    color: red;
+}
+
 .fa-github:hover {
     color: black;
 }
@@ -127,7 +131,22 @@ li {
 }
 
 #about_me_list {
-    text-indent: -50px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+
+    a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    img {
+        height: 36px;
+        display: block
+    }
 }
 
 #projects {
@@ -142,20 +161,44 @@ li {
     color: rgb(128, 175, 57);
 }
 
+#contributions {
+    @include center_div();
+
+    a {
+        color: lightblue;
+    }
+
+    li {
+        text-indent: -50px;
+    }
+}
+
+#contributions_title {
+    color: rgb(255, 192, 103);
+}
+
+#awards {
+    @include center_div();
+
+    li {
+        text-indent: -50px;
+    }
+}
+
+#awards_title {
+    color: rgb(254, 238, 140);
+}
+
 #langs {
     @include center_div();
+
+    li {
+        text-indent: -50px;
+    }
 }
 
 #langs_title {
     color: rgb(103, 180, 155);
-}
-
-#social {
-    @include center_div();
-}
-
-#social_title {
-    color: brown;
 }
 
 #langauges_chart {
