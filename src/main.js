@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Base and per-item expansion height
     const baseHeight = 550;
-    const heightPerAccordion = 100;
+    const heightPerAccordion = 150;
 
     accordionItemHeaders.forEach((header) => {
         header.addEventListener("click", () => {
